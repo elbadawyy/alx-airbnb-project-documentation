@@ -1,0 +1,82 @@
+<mxfile host="app.diagrams.net" modified="2025-10-27T22:00:00.000Z" agent="5.0 (Linux)" version="22.0.8" editor="draw.io">
+  <diagram id="flowchart1" name="Property Booking Flowchart">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Start -->
+        <mxCell id="start" value="Start" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="300" y="50" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- User selects property -->
+        <mxCell id="select_property" value="User selects a property" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="280" y="150" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Check availability -->
+        <mxCell id="check_availability" value="System checks property availability" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="260" y="250" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision -->
+        <mxCell id="availability_decision" value="Is property available?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="300" y="350" width="160" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Not available -->
+        <mxCell id="not_available" value="Notify user: Not available" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="80" y="480" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Available -->
+        <mxCell id="proceed_booking" value="Proceed to booking details" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="420" y="480" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Payment -->
+        <mxCell id="process_payment" value="User submits payment info" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="420" y="580" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Confirm booking -->
+        <mxCell id="confirm_booking" value="System confirms booking and sends email" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="400" y="680" width="250" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- End -->
+        <mxCell id="end" value="End" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="470" y="780" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="edge1" source="start" target="select_property" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge2" source="select_property" target="check_availability" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge3" source="check_availability" target="availability_decision" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge4" source="availability_decision" target="not_available" value="No" style="endArrow=block;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge5" source="availability_decision" target="proceed_booking" value="Yes" style="endArrow=block;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge6" source="proceed_booking" target="process_payment" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge7" source="process_payment" target="confirm_booking" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge8" source="confirm_booking" target="end" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
